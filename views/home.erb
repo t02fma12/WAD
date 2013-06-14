@@ -1,0 +1,17 @@
+<div class="msg">
+  <form 
+  </form>
+</div>
+
+<!--  dispaying the quote of the day  -->
+<% @conversations.each do |conversation| %>
+<article <%= 'class="complete"' if conversation.complete %>>
+<p>
+  <%= conversation.message %>
+ <!-- <a href="/<%= conversation.id %>">[Edit]</a> -->
+<p class="">
+  <a href="/<%= conversation.id %>/complete">&#8623;</a>
+</p>
+<p class="time">Created: <%= conversation.written_at %></p>
+</article>
+<% end %>

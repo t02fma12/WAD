@@ -1,0 +1,11 @@
+<% if @conversation %>
+<form action="/<%= @conversation.id %>" method="post" id="edit">
+<input type="hidden" name="method" value="put">
+<textarea name="message"><%=@conversation.message %></textarea>
+<input type="checkbox" name="complete" <% "checked" if @conversation.complete %>>
+<input type="submit">
+</form>
+<p><a href="/<%= @conversation.id %>/delete">Delete</a></p>
+<% else %>
+<p>Quote not found</p>
+<% end %>

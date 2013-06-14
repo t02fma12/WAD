@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf8">
+        <title><%= @title + '| Quote' %></title>
+        <link href="/style.css" rel="stylesheet">
+          <script> 
+    (function(d, s, id) {
+ var js, fjs = d.getElementsByTagName(s)[0];
+ if (d.getElementById(id)) return;
+ js = d.createElement(s); js.id = id;
+ js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+ fjs.parentNode.insertBefore(js, fjs);
+ }(document, 'script', 'facebook-jssdk'));</script>
+</head>
+<body>
+<div id="header">
+<p>Quote of the Day</p>
+<div class="admin">
+<a href="/protected">Update</a>
+</div>
+</div>
+<div class="navigation">
+<a href="/">Home</a>
+<a href="/about">About</a>
+<a href="/help">Help</a>
+</div>
+<div class="body">
+    <%= yield %>
+</div>
+<div class="foot">
+  <div id="Facebook" class="fb-like"></div>
+    <p>Footer</p>
+</div>
+</body>
+</html>

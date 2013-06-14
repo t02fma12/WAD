@@ -1,0 +1,10 @@
+<% if @conversation %>
+<p>should the following quote be deleted: <strong>"<%=@conversation.message %>"</strong>?</p>
+<form action="/<%= @conversation.id %>" method="post">
+<input type="hidden" name="method2" value="delete">
+<input type="submit" value="yes, delete">
+<a href="/<%= @conversation.id %>">Remove</a>
+</form>
+<% else %>
+<p>Quote not found</p>
+<% end %>
